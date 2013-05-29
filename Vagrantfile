@@ -8,7 +8,7 @@ Vagrant::Config.run do |config|
 
   config.vm.define "database" do |cfg|
     cfg.vm.forward_port 5432, 5432
-    cfg.vm.forward_port 80, 8080
+    cfg.vm.forward_port 80, 8081
     cfg.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = File.join(HERE, 'cookbooks')
       chef.add_recipe("apt")
@@ -23,7 +23,7 @@ Vagrant::Config.run do |config|
             "host all all ::1/0 md5",
           ],
           :users => [
-            { :username => "postgres", :password => "password",
+            { :username => "postgres", :password => "postgres",
               :superuser => true, :login => true, :createdb => true }
           ],
         }
