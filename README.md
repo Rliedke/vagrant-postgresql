@@ -24,8 +24,8 @@ To destroy the database server do the following (this will remove all data):
 
     script/database destroy
 
-Then you should be able to navigate to http://localhost:8080/phppgadmin and log
-into the database server using the username *postgres* and password *password*
+Then you should be able to navigate to http://localhost:8081/phppgadmin and log
+into the database server using the username *postgres* and password *postgres*
 
 From a terminal you can also start a shell (given that you have the postgresql
 client on your host operating system).
